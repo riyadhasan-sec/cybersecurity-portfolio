@@ -78,13 +78,13 @@ The DVWA Brute Force module at the Low security level lacks essential protection
 
 ## 📸 Evidence
 
-### 1. Burp Intruder Attack Results
-![Intruder Results](screenshots/01-intruder-results.png)
-> **Analysis:** Out of all attempted passwords, only the payload `password` returned a response with a different length (`4741` instead of `4702`), indicating a successful login.
-
-### 2. Wordlist Loaded in Burp Intruder
-![Wordlist Loaded](screenshots/02-wordlist-loaded.png)
+### 1. Wordlist Loaded in Burp Intruder
+![Wordlist Loaded](screenshots/01-wordlist-loaded.png)
 > **Analysis:** The SecLists wordlist `top-passwords-shortlist.txt` was loaded into Burp Intruder's Payloads section. This wordlist contains commonly used passwords and was used to fuzz the `password` parameter during the attack.
+
+### 2. Burp Intruder Attack Results
+![Intruder Results](screenshots/02-intruder-results.png)
+> **Analysis:** Out of all attempted passwords, only the payload `password` returned a response with a different length (`4741` instead of `4702`), indicating a successful login.
 
 ### 3. Verified Login to DVWA
 ![Successful Login](screenshots/03-successful-login.png)
