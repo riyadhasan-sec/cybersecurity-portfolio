@@ -82,9 +82,9 @@ The DVWA Brute Force module at the Low security level lacks essential protection
 ![Intruder Results](screenshots/01-intruder-results.png)
 > **Analysis:** Out of all attempted passwords, only the payload `password` returned a response with a different length (`4741` instead of `4702`), indicating a successful login.
 
-### 2. Successful Response Payload
-![Successful Response](screenshots/02-response-welcome.png)
-> **Analysis:** The HTTP response confirms successful authentication, displaying the message "Welcome to the password protected area admin".
+### 2. Wordlist Loaded in Burp Intruder
+![Wordlist Loaded](screenshots/02-response-welcome.png)
+> **Analysis:** The SecLists wordlist `top-passwords-shortlist.txt` was loaded into Burp Intruder's Payloads section. This wordlist contains commonly used passwords and was used to fuzz the `password` parameter during the attack.
 
 ### 3. Verified Login to DVWA
 ![Successful Login](screenshots/03-successful-login.png)
